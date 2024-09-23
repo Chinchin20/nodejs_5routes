@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Shoe</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <h1>Edit Shoe</h1>
+    <form action="/shoes/edit/<%= shoe.id %>" method="POST">
+        <label for="name">Shoe Name:</label>
+        <input type="text" name="name" value="<%= shoe.name %>" required>
+        <label for="size">Shoe Size:</label>
+        <input type="number" name="size" value="<%= shoe.size %>" required>
+        <label for="price">Price:</label>
+        <input type="number" name="price" value="<%= shoe.price %>" required>
+        <button type="submit" class="button">Update Shoe</button>
+    </form>
+</body>
+</html>
